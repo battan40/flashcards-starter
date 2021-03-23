@@ -3,7 +3,7 @@ const expect = chai.expect;
 
 const Card = require('../src/Card');
 
-describe('Card', function() {
+describe('Card', () => {
   let card;
 
   beforeEach(() => {
@@ -15,14 +15,14 @@ describe('Card', function() {
     expect(Card).to.be.a('function');
   });
 
-  it.skip('should be an instance of Card', () => {
+  it('should be an instance of Card', () => {
     const card = new Card();
     expect(card).to.be.an.instanceof(Card);
   });
 
-  it.skip('should store a question', () => {
-    const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    expect(card.question).to.equal('What allows you to define a set of related information using key-value pairs?');
+  it('should store a question', () => {
+
+    expect(card.question).to.equal('How many Sirens sing sailors to their end?');
   });
 
   it.skip('should store a list of possible answers', () => {
