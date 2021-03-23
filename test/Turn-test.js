@@ -12,5 +12,9 @@ describe ('Turn', () => {
     turn = new Turn('three', card);
   })
 
+  it.skip('should be a function', () => {
+    const card = new Card();
+    expect(card).to.be.a('function');
+  });
   
 });
