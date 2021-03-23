@@ -21,17 +21,14 @@ describe('Card', () => {
   });
 
   it('should store a question', () => {
-
     expect(card.question).to.equal('How many Sirens sing sailors to their end?');
   });
 
-  it.skip('should store a list of possible answers', () => {
-    const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    expect(card.answers).to.deep.equal(['object', 'array', 'function']);
+  it('should store a list of possible answers', () => {
+    expect(card.answers).to.deep.equal(['one', 'seven', 'three']);
   });
 
-  it.skip('should store the correct answer', () => {
-    const card = new Card(1, 'What allows you to define a set of related information using key-value pairs?', ['object', 'array', 'function'], 'object');
-    expect(card.correctAnswer).to.equal('object');
+  it('should store the correct answer', () => {
+    expect(card.correctAnswer).to.equal('three');
   });
 });
