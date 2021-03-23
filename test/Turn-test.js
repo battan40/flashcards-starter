@@ -5,13 +5,12 @@ const Card = require('../src/Card');
 const Turn = require('../src/Turn');
 
 describe ('Turn', () => {
-  let card;
-  let turn;
+  let card, turn;
 
   beforeEach(() => {
     card = new Card(1, 'How many Sirens sing sailors to their end?', ['one', 'seven', 'three'], 'three');
     turn = new Turn('three', card);
-  })
+  });
 
   it('should be a function', () => {
     expect(Turn).to.be.a('function');
