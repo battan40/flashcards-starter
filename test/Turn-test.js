@@ -33,8 +33,18 @@ describe ('Turn', () => {
     expect(turn.returnGuess()).to.equal('three');
   });
 
-  // it('should be able to return a card', () => {
-  //     expect(turn.returnCard()).to.deep.equal(card);
-  //});
+  it('should be able to return a card', () => {
+      expect(turn.returnCard()).to.deep.equal(card);
+  });
+
+  it('should be able to evaluate if the user\'s answer is correct', () => {
+    expect(turn.evaluateGuess(turn.guess)).to.deep.equal(true);
+  })
+
+  it ('should be able to evaluate if the user\'s guess in incorrect', () => {
+    expect(turn.evaluateGuess(this.guess)).to.deep.equal(false);
+  })
+
+  it 
 
 });
