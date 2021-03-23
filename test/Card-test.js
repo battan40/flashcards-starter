@@ -11,12 +11,10 @@ describe('Card', () => {
   });
 
   it('should be a function', () => {
-    const card = new Card();
     expect(Card).to.be.a('function');
   });
 
   it('should be an instance of Card', () => {
-    const card = new Card();
     expect(card).to.be.an.instanceof(Card);
   });
 

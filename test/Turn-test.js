@@ -13,10 +13,16 @@ describe ('Turn', () => {
   })
 
   it('should be a function', () => {
-    const card = new Card();
     expect(Turn).to.be.a('function');
   });
 
-  
+  it('should be an instance of a Turn', () => {
+    expect(turn).to.be.an.instanceof(Turn);
+  });
+
+  it('should be able to store a users guess', () => {
+    expect(turn.guess).to.equal('three');
+  });
+
 
 });
