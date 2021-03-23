@@ -7,5 +7,10 @@ const Turn = require('../src/Card');
 describe ('Turn', () => {
   let card, turn;
 
+  beforeEach(() => {
+    card = new Card(1, 'How many Sirens sing sailors to their end?', ['one', 'seven', 'three'], 'three');
+    turn = new Turn('three', card);
+  })
 
-})
+  
+});
