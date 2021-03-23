@@ -21,16 +21,21 @@ describe ('Deck', () => {
 
   it('should be able to have an array of cards', () => {
     const card1 = new Card(1, 'How many Sirens sing sailors to their end?', ['one', 'seven', 'three'], 'three');
-    const card2 = new Card(2, 'What is the Sirens true name', ['Angie', 'Inanna', 'Demeter'], 'Angie');
+    const card2 = new Card(2, 'What is the Sirens true name', ['Angie', 'Inanna', 'Nik', 'Hannah'], 'Angie');
     const card3 = new Card(3, 'Sirens in their true form are what creatures?', ['Mermaids', 'Snakes', 'Birds'], 'birds');
 
-    deck = [card1, card2, card3];
-
-    expect(deck).to.deep.equal([card1, card2, card3]);
+    const deck = new Deck ([card1, card2, card3]);
+    expect(deck.cards).to.deep.equal([card1, card2, card3]);
   });
 
-  // it('should know how many cards are in the deck', () => {
-  //   expect(countCardsInDeck).to.deep.equal(3)
-  // })
+  it('should know how many cards are in the deck', () => {
+    const card1 = new Card(1, 'How many Sirens sing sailors to their end?', ['one', 'seven', 'three'], 'three');
+    const card2 = new Card(2, 'What is the Sirens true name', ['Angie', 'Inanna', 'Nik', 'Hannah'], 'Angie');
+    const card3 = new Card(3, 'Sirens in their true form are what creatures?', ['Mermaids', 'Snakes', 'Birds'], 'birds');
+
+    const deck = new Deck ([card1, card2, card3]);
+    console.log(deck);
+    expect(deck.countCardsInDeck()).to.deep.equal(3)
+  })
 
 });
