@@ -32,6 +32,5 @@ describe('Card', () => {
 
   it('should store the correct answer', () => {
     expect(card.correctAnswer).to.equal('three');
-    console.log(card);
   });
 });
