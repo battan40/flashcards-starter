@@ -16,5 +16,12 @@ class Turn {
       return true;
     }
   }
+  giveFeedback(evaluation) {
+    if (!this.evaluateGuess === evaluation) {
+      return 'TRY AGAIN!';
+    } else {
+      return 'CORRECT!'
+    }
+  }
 }
 module.exports = Turn;

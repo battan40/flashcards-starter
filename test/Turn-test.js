@@ -41,10 +41,16 @@ describe ('Turn', () => {
     expect(turn.evaluateGuess(turn.guess)).to.deep.equal(true);
   })
 
-  it ('should be able to evaluate if the user\'s guess in incorrect', () => {
-    expect(turn.evaluateGuess(this.guess)).to.deep.equal(false);
+  it('should be able to evaluate if the user\'s guess in incorrect', () => {
+    expect(turn.evaluateGuess()).to.deep.equal(false);
   })
 
-  it 
+  it('should be able to give feedback to the user when their answers are correct', () => {
+    expect(turn.giveFeedback()).to.deep.equal('CORRECT!');
+  })
+
+  it('should be able to give alternative feedback to the user when their answers are incorrect', () => {
+    expect(turn.giveFeedback(turn.evaluateGuess())).to.deep.equal('TRY AGAIN!');
+  })
 
 });
