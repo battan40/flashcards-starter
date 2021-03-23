@@ -52,5 +52,4 @@ describe ('Turn', () => {
   it('should be able to give alternative feedback to the user when their answers are incorrect', () => {
     expect(turn.giveFeedback(turn.evaluateGuess())).to.deep.equal('TRY AGAIN!');
   })
-
 });
