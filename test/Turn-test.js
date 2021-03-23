@@ -22,7 +22,6 @@ describe ('Turn', () => {
   });
 
   it('should be able to store a user\'s guess', () => {
-    console.log(turn);
     expect(turn.guess).to.equal('three');
   });
 
@@ -30,10 +29,10 @@ describe ('Turn', () => {
     expect(turn.card).to.deep.equal(card);
   });
 
-  // it('should be able to return a user\'s guess', () => {
-  //   expect(turn.returnGuess().to.equal('three'));
-  // });
-  //
+  it('should be able to return a user\'s guess', () => {
+    expect(turn.returnGuess()).to.equal('three');
+  });
+
   // it('should be able to return a card', () => {
   //     expect(turn.returnCard()).to.deep.equal(card);
   //});
