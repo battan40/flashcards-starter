@@ -8,10 +8,29 @@ describe ('Deck', () => {
   let deck;
 
   beforeEach(() => {
-    let deck = new Deck ();
+    deck = new Deck ();
   });
 
   it('should be a function', () => {
     expect(Deck).to.be.a('function');
   });
+
+  it('should be an instance of a Deck', () => {
+    expect(deck).to.be.an.instanceof(Deck);
+  });
+
+  it('should be able to have an array of cards', () => {
+    const card1 = new Card(1, 'How many Sirens sing sailors to their end?', ['one', 'seven', 'three'], 'three');
+    const card2 = new Card(2, 'What is the Sirens true name', ['Angie', 'Inanna', 'Demeter'], 'Angie');
+    const card3 = new Card(3, 'Sirens in their true form are what creatures?', ['Mermaids', 'Snakes', 'Birds'], 'birds');
+
+    deck = [card1, card2, card3];
+
+    expect(deck).to.deep.equal([card1, card2, card3]);
+  });
+
+  // it('should know how many cards are in the deck', () => {
+  //   expect(countCardsInDeck).to.deep.equal(3)
+  // })
+
 });
