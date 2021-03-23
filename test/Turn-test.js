@@ -2,10 +2,11 @@ const chai = require('chai');
 const expect = chai.expect;
 
 const Card = require('../src/Card');
-const Turn = require('../src/Card');
+const Turn = require('../src/Turn');
 
 describe ('Turn', () => {
-  let card, turn;
+  let card;
+  let turn;
 
   beforeEach(() => {
     card = new Card(1, 'How many Sirens sing sailors to their end?', ['one', 'seven', 'three'], 'three');
@@ -20,9 +21,21 @@ describe ('Turn', () => {
     expect(turn).to.be.an.instanceof(Turn);
   });
 
-  it('should be able to store a users guess', () => {
+  it('should be able to store a user\'s guess', () => {
+    console.log(turn);
     expect(turn.guess).to.equal('three');
   });
 
+  it('should be able to store a card object', () => {
+    expect(turn.card).to.deep.equal(card);
+  });
+
+  // it('should be able to return a user\'s guess', () => {
+  //   expect(turn.returnGuess().to.equal('three'));
+  // });
+  //
+  // it('should be able to return a card', () => {
+  //     expect(turn.returnCard()).to.deep.equal(card);
+  //});
 
 });

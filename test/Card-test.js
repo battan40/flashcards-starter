@@ -18,6 +18,10 @@ describe('Card', () => {
     expect(card).to.be.an.instanceof(Card);
   });
 
+  it('should have an id', () => {
+    expect(card.id).to.equal(1);
+  });
+
   it('should store a question', () => {
     expect(card.question).to.equal('How many Sirens sing sailors to their end?');
   });
@@ -28,5 +32,6 @@ describe('Card', () => {
 
   it('should store the correct answer', () => {
     expect(card.correctAnswer).to.equal('three');
+    console.log(card);
   });
 });
