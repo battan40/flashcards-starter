@@ -28,7 +28,7 @@ describe ('Round', () => {
     expect(round.deck).to.deep.equal(deck)
   });
 
-  it('should have the ability to track correct guesses and start with zero correct guesses', () => {
+  it('should track correct guesses and start with zero correct guesses', () => {
     expect(round.correctGuesses).to.deep.equal(0);
   });
 
@@ -39,5 +39,23 @@ describe ('Round', () => {
   it('should have a turn counter', () => {
     expect(round.turnCounter).to.deep.equal(0);
   });
+
+  it('should know what the current card in play is', () => {
+    expect(round.currentCard).to.deep.equal(card1);
+  });
+
+  it('should have a way of keeping track of the current card while the round is being played', () => {
+    expect(round.returnCurrentCard()).to.deep.equal(card1);
+  })
+
+  it('should update the turn count', () => {
+    round.takeATurn('guess');
+    round.takeATurn('guess');
+    round.takeATurn('guess');
+
+    expect(round.turnCounter).to.deep.equal(3);
+  });
+
+
 
 });
