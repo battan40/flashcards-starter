@@ -17,7 +17,27 @@ describe ('Round', () => {
   });
 
   it('should be a function', () => {
+    expect(Round).to.be.a('function');
+  });
+
+  it('should instantiate the Round', () => {
     expect(round).to.be.an.instanceof(Round);
   });
-  
+
+  it('should have a deck', () => {
+    expect(round.deck).to.deep.equal(deck)
+  });
+
+  it('should have the ability to track correct guesses and start with zero correct guesses', () => {
+    expect(round.correctGuesses).to.deep.equal(0);
+  });
+
+  it('should be able to store the incorrect number of guesses', () => {
+    expect(round.incorrectGuesses.length).to.deep.equal(0);
+  });
+
+  it('should have a turn counter', () => {
+    expect(round.turnCounter).to.deep.equal(0);
+  });
+
 });
