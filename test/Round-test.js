@@ -68,8 +68,12 @@ describe ('Round', () => {
     expect(round.returnCurrentCard()).to.deep.equal(card3);
   });
 
-  // it('should give feedback if the answer is correct', () => {
-  //
-  // })
+  it('should give feed back if the guess is correct', () => {
+    expect(round.takeATurn('three')).to.deep.equal('CORRECT!');
+  });
+
+  it('should give feed back if the guess is incorrect as well', () => {
+    expect(round.takeATurn('seven')).to.deep.equal('TRY AGAIN!');
+  })
 
 });
