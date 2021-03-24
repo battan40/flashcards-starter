@@ -74,6 +74,15 @@ describe ('Round', () => {
 
   it('should give feed back if the guess is incorrect as well', () => {
     expect(round.takeATurn('seven')).to.deep.equal('TRY AGAIN!');
-  })
+  });
+
+  it('should calculate the percentage of the questions answered correctly', () => {
+    round.takeATurn('three');
+    round.takeATurn('Angie');
+    expect(round.calculatePercentCorrect()).to.equal(100);
+
+    round.takeATurn('snakes');
+    expect(round.calculatePercentCorrect()).to.equal(67);
+  });
 
 });

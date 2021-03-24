@@ -15,16 +15,22 @@ class Round {
   }
 
   takeATurn(guess) {
-    let turn = new Turn (guess, this.currentCard);
     this.turnCounter++
-    this.currentCard = this.deck.cards[this.turnCounter];
+    let turn = new Turn (guess, this.currentCard);
     if (turn.evaluateGuess()) {
-      this.incorrectGuesses.push(this.currentCard)
-      return turn.giveFeedback();
-    } else if (!turn.evaluateGuess()) {
       this.correctGuesses++
-      return turn.giveFeedback();
+    } else if (!turn.evaluateGuess()) {
+    this.incorrectGuesses.push(this.currentCard.id)
     }
+    this.currentCard = this.deck.cards[this.turnCounter];
+    this.returnCurrentCard()
+    return turn.giveFeedback();
+  }
+
+  calculatePercentCorrect() {
+    let percentage = Math.round(this.correctGuesses /
+       this.turnCounter * 100)
+    return percentage;
   }
 }
 module.exports = Round;
