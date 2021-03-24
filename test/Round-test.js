@@ -56,6 +56,20 @@ describe ('Round', () => {
     expect(round.turnCounter).to.deep.equal(3);
   });
 
+  it('should update the current card as often as the turn traker is updated', () => {
+    round.takeATurn('three');
+    round.returnCurrentCard();
 
+    expect(round.returnCurrentCard()).to.deep.equal(card2);
+
+    round.takeATurn('Angie');
+    round.returnCurrentCard();
+
+    expect(round.returnCurrentCard()).to.deep.equal(card3);
+  });
+
+  // it('should give feedback if the answer is correct', () => {
+  //
+  // })
 
 });

@@ -1,5 +1,4 @@
 const Turn = require("./Turn");
-const Card = require("./Card");
 
 class Round {
   constructor(pile) {
@@ -15,6 +14,8 @@ class Round {
   takeATurn(guess) {
     let turn = new Turn ('guess', this.currentCard);
     this.turnCounter++
+    this.currentCard = this.deck.cards[this.turnCounter];
+
   }
 }
 module.exports = Round;
