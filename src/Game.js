@@ -12,14 +12,17 @@ class Game {
   }
 
   beginGame() {
-    let gameCards = new Deck(gameCards);
+    let gameCards = prototypeQuestions.map(card => {
+      return new Card(card.id, card.question, card.answers, card.correctAnswer)
+    });
+    let gameDeck = new Deck(gameCards);
     this.currentRound = new Round(gameDeck);
     this.printMessage(gameDeck);
     this.printQuestion(this.currentRound);
   }
 
   printMessage(deck, round) {
-      console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
+      console.log(`Welcome to FlashCards! You are playing with ${deck.countCardsInDeck()} cards.
 -----------------------------------------------------------------------`)
   }
 

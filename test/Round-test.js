@@ -85,13 +85,4 @@ describe ('Round', () => {
     expect(round.calculatePercentCorrect()).to.equal(67);
   });
 
-  it('should give a message at the end of the round with the actual percent correct calculated', () => {
-    round.takeTurn('seven');
-    round.takeTurn('Angie');
-    round.takeTurn('birds');
-    round.endRound();
-
-    expect(round.endRound()).to.equal('** Round over! ** You answered 67% of the questions correctly!');
-  });
-
 });

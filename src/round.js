@@ -24,7 +24,6 @@ class Round {
     }
     this.currentCard = this.deck.cards[this.turnCounter];
     turn.card = this.currentCard;
-    this.returnCurrentCard()
     return userFeedback;
   }
 
@@ -35,7 +34,7 @@ class Round {
   }
   endRound() {
     const endRoundPhrase = `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`;
-    return endRoundPhrase;
+    console.log(endRoundPhrase);
   }
 }
 module.exports = Round;
