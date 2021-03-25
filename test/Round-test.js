@@ -69,20 +69,29 @@ describe ('Round', () => {
   });
 
   it('should give feed back if the guess is correct', () => {
-    expect(round.takeATurn('three')).to.deep.equal('CORRECT!');
+    expect(round.takeATurn('three')).to.equal('CORRECT!');
   });
 
   it('should give feed back if the guess is incorrect as well', () => {
-    expect(round.takeATurn('seven')).to.deep.equal('TRY AGAIN!');
+    expect(round.takeATurn('seven')).to.equal('TRY AGAIN!');
   });
 
   it('should calculate the percentage of the questions answered correctly', () => {
-    round.takeATurn('three');
+    round.takeATurn('seven');
     round.takeATurn('Angie');
-    expect(round.calculatePercentCorrect()).to.equal(100);
+    expect(round.calculatePercentCorrect()).to.equal(50);
 
-    round.takeATurn('snakes');
+    round.takeATurn('birds');
     expect(round.calculatePercentCorrect()).to.equal(67);
+  });
+
+  it('should give a message at the end of the round with the actual percent correct calculated', () => {
+    round.takeATurn('seven');
+    round.takeATurn('Angie');
+    round.takeATurn('birds');
+    round.endRound();
+
+    expect(round.endRound()).to.equal('** Round over! ** You answered 67% of the questions correctly!');
   });
 
 });

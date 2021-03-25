@@ -32,5 +32,9 @@ class Round {
        this.turnCounter * 100)
     return percentage;
   }
+  endRound() {
+    const endRoundPhrase = `** Round over! ** You answered ${this.calculatePercentCorrect()}% of the questions correctly!`;
+    return endRoundPhrase;
+  }
 }
 module.exports = Round;
