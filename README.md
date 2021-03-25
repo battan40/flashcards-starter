@@ -39,6 +39,15 @@
 
 [Project Board](https://trello.com/b/HruojfNd/flashcards)
 
+## Functionality Goals
+
+* App runs through all iterations and one extension without any bugs or crashes or missing Functionality
+* `javaScript` syntax is *DRY* organized and holds to *SRP*
+* Strong testing suite for `TDD` foundational learning
+* Testing Suite uses own data, and has happy and sad path testing
+
+## Road Map
+
 #####Future Iterations Should Include:
 
 * An opportunity to review incorrect answers
@@ -47,4 +56,4 @@
 
 ## Preview
 
-![flashcards gif](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
+![Quick Glance Ahead](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
