@@ -59,12 +59,10 @@ describe ('Round', () => {
   it('should update the current card as often as the turn traker is updated', () => {
     round.takeTurn('three');
     round.returnCurrentCard();
-
     expect(round.returnCurrentCard()).to.deep.equal(card2);
 
     round.takeTurn('Angie');
     round.returnCurrentCard();
-
     expect(round.returnCurrentCard()).to.deep.equal(card3);
   });
 
@@ -84,5 +82,4 @@ describe ('Round', () => {
     round.takeTurn('birds');
     expect(round.calculatePercentCorrect()).to.equal(67);
   });
-
 });
