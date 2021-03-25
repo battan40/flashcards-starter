@@ -27,34 +27,24 @@
 * Read the README.md
 * To run the app, on the terminal line, run the command `node index.js`
 
+## Project Link
 
+[Repo](https://github.com/battan40/flashcards-starter)
 
-![flash cards example gif](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
+## Contributor
 
----
+* [Angela Battillo](https://github.com/battan40)
 
-## Test Files Organization
+## Project Planning Board
 
-Similar to feature code, your test code needs to be put in a specific place for it to run successfully.
+[Project Board](https://trello.com/b/HruojfNd/flashcards)
 
-**Put all of your test files in the `test` directory.** As a convention, all test filenames should end with `-test.js`. For instance: `Round-test.js`.
+#####Future Iterations Should Include:
 
-## Running Your Tests
+* An opportunity to review incorrect answers
+* A timer to report back to the user their practice time
+* The option to start the game over immediately
 
-Run your test suite using the command:
+## Preview
 
-```bash
-npm test
-```
-
-The test results will output to the terminal.
-
----
-
-## Linting Your Code
-
-Run the command in your terminal `npm run lint` to run the linter on your JavaScript code. There will be errors and warnings right from the start in this starter kit - the linter is still running successfully.
-
-Your linter will look at the JavaScript files you have within the `src` directory and the `test` directory.
-
----
+![flashcards gif](https://media.giphy.com/media/1zkb1q58eTiTH6D7wc/giphy.gif)
