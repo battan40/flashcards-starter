@@ -1,4 +1,4 @@
-# FlashCards CLI
+# FlashCards C.L.I.
 
 #### A Learning Game For Those of Us That Miss The 80's
 
@@ -18,7 +18,7 @@
 
 ## Overview
 
-* Do you miss the 80's?  Do you like to study abstract ES6 and play games. I have just the thing for you. A study flashcards game run entirely on the terminal line. This project drives home the practice of `TDD` to build out errorless class to class interaction.
+* Do you miss the 80's?  Do you like to study abstract ES6 AND play games? I have just the thing for you. A study flashcards game run entirely on the terminal line! This project drives home the practice of `TDD` to build out errorless class to class interaction.
 
 ## Set-up
 
